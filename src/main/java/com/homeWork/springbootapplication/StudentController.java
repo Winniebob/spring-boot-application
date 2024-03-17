@@ -30,7 +30,7 @@ public class StudentController {
         return students;
     }
 
-    // /student/search?name='studentName' - получить список студентов, чье имя содержит подстроку studentName
+    // /student/search?name='studentName' - получить список студентов, чье имя содержит  studentName
     @GetMapping("/student/search")
     public List<Student> searchStudentsByName(@RequestParam String name) {
         return students.stream()
