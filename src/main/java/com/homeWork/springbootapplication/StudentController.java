@@ -30,7 +30,7 @@ public class StudentController {
         return students;
     }
 
-    // /student/search?name='studentName' - получить список студентов, чье имя содержит  studentName
+    // /student/search?name='studentName' - получить список студентов, чье имя содержит подстроку studentName
     @GetMapping("/student/search")
     public List<Student> searchStudentsByName(@RequestParam String name) {
         return students.stream()
@@ -55,10 +55,10 @@ public class StudentController {
     //  при старте приложения добавим несколько тестовых студентов
     @PostConstruct
     public void initStudents() {
-        addStudent(new Student(1L, "Иванов", "Группа A"));
-        addStudent(new Student(2L, "Петров", "Группа B"));
-        addStudent(new Student(3L, "Сидоров", "Группа A"));
-        addStudent(new Student(4L, "Козлов", "Группа C"));
-        addStudent(new Student(5L, "Смирнов", "Группа B"));
+        addStudent(new Student(1l,"Иванов", "Группа A"));
+        addStudent(new Student(2l, "Петров", "Группа B"));
+        addStudent(new Student(3l, "Сидоров", "Группа A"));
+        addStudent(new Student(4l, "Козлов", "Группа C"));
+        addStudent(new Student(5l, "Смирнов", "Группа B"));
     }
 }
